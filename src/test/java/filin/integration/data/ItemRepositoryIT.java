@@ -1,5 +1,6 @@
-package filin.data;
+package filin.integration.data;
 
+import filin.integration.controller.data.ItemRepository;
 import filin.model.Item;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -13,7 +14,7 @@ import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public class ItemRepositoryTest {
+public class ItemRepositoryIT {
 
     @Autowired
     private ItemRepository repository;

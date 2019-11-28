@@ -1,4 +1,4 @@
-package filin.data;
+package filin.integration.controller.data;
 
 import filin.model.Item;
 import org.springframework.data.jpa.repository.JpaRepository;

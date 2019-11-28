@@ -3,6 +3,7 @@
 /target
 *.iml
 .idea
+*.exec
 
 # Package Files #
 *.jar

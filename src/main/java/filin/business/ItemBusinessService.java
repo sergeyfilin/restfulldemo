@@ -2,7 +2,7 @@ package filin.business;
 
 import java.util.List;
 
-import filin.data.ItemRepository;
+import filin.integration.controller.data.ItemRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import filin.model.Item;
