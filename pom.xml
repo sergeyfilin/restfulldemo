@@ -27,7 +27,7 @@
 		<sonar.organization>sergeyfilin</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
 		<sonar.login>16dac2b64a079efd51bd0a08fa75db93ca9edfbf</sonar.login>
-		<sonar.coverage.jacoco.xmlReportPaths>${project.reporting.outputDirectory}/jacoco-integration-test-coverage-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+		<sonar.coverage.jacoco.xmlReportPaths>${project.reporting.outputDirectory}/jacoco-merged-test-coverage-report/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
 	</properties>
 
 	<dependencies>
@@ -180,20 +180,17 @@
 						<id>check</id>
 						<phase>verify</phase>
 						<goals>
-							<!--goal>check</goal-->
+							<goal>check</goal>
 						</goals>
 						<configuration>
 							<rules>
 								<rule>
 									<element>CLASS</element>
-									<excludes>
-										<exclude>ApplicationTests</exclude>
-									</excludes>
 									<limits>
 										<limit>
 											<counter>LINE</counter>
 											<value>COVEREDRATIO</value>
-											<minimum>100%</minimum>
+											<minimum>0%</minimum>
 										</limit>
 									</limits>
 								</rule>
@@ -227,25 +224,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<!--plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>${jacoco.version}</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>report</id>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin-->
 		</plugins>
 	</build>
 
